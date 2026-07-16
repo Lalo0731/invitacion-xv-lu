@@ -1,0 +1,58 @@
+@use "../../base/variables" as *;
+
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero__image{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    top:0;
+    left:0;
+}
+
+.hero__overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.5)
+    );
+
+    z-index:1;
+}
+
+.hero__content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+}
+
+.hero__subtitle{
+    letter-spacing:4px;
+    font-size:.9rem;
+    margin-bottom:10px;
+    color:#dbe7f5;
+}
+
+.hero__title{
+    font-family:$font-title;
+    font-size:2.5rem;
+}
+
+.hero__title{
+    text-shadow:0 5px 15px rgba(0,0,0,.3);
+}

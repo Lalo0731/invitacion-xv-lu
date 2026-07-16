@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Countdown from '../components/Countdown/Countdown';
+import Hero from '../components/Hero/Hero';
+import Parents from '../components/Parents/Parents';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Holss</h1>
-    </div>
+    <>
+      <Hero/>
+      <Countdown/>
+      <Parents/>
+    </>
   )
 }
 
