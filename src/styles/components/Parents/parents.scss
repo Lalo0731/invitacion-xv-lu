@@ -34,19 +34,19 @@
 
 .parents__flower{
     position:absolute;
-    width:80px;
+    width:137px;
     opacity:.8;
     pointer-events:none;
 
     &--left{
-          top: -11px;
-          left: -31px;
+          top: -22px;
+          left: -44px;
           transform: rotate(-28deg);
     }
 
     &--right{
-        bottom:-20px;
-        right:-20px;
+        bottom:-24px;
+        right:-30px;
         transform: rotate(-19deg);
     }
 }
