@@ -1,0 +1,125 @@
+@use "../../base/variables" as *;
+
+.dress{
+     position:relative;
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.dress__decor{
+    position:absolute;
+    width:125px;
+    opacity:.15;
+    pointer-events:none;
+    z-index:0;
+
+    --rotate: 0deg;
+    animation: floatV 6s ease-in-out infinite;
+}
+
+
+.dress__decor--leftD{
+    top: 67px;
+    left:-22px;
+    --rotate: 6deg;
+}
+
+.dress__decor--rightS{
+    bottom: 51px;
+    right: 28px;
+    width: 57px;
+    --rotate: 12deg;
+}
+
+// .dress__decor{
+//     animation: float 6s ease-in-out infinite;
+// }
+
+@keyframes floatV{
+    0%{ transform: translateY(0px) rotate(var(--rotate)); }
+    50%{ transform: translateY(-10px) rotate(calc(var(--rotate) + 2deg)); }
+    100%{ transform: translateY(0px) rotate(var(--rotate)); }
+}
+
+.dress__card{
+    background:white;
+    padding:30px 25px;
+    border-radius:20px;
+    text-align:center;
+    max-width:320px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    position:relative;
+}
+
+.dress__card::before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:rgba(107,143,179,0.15);
+    filter:blur(40px);
+    top:-20px;
+    right:-20px;
+}
+
+.dress__title{
+    font-family:$font-title;
+    color:$color-primary;
+    margin-bottom:10px;
+}
+
+.dress__subtitle{
+    font-size:.9rem;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.dress__color{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.dress__circle{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#6b8fb3; // azul plumbago aprox
+    box-shadow:0 0 10px rgba(107,143,179,.4);
+}
+
+.dress__icons{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:20px;
+}
+
+.dress__item span{
+    font-size:1.5rem;
+}
+
+.dress__item p{
+    font-size:.8rem;
+    color:#555;
+}
+
+.dress__icon-img{
+    width: 100px;
+    height:auto;
+}
+
+.dress__icon-img{
+    filter: drop-shadow(0 4px 6px rgba(107,143,179,.3));
+}
+
+.dress__item:hover{
+    transform:translateY(-3px) scale(1.1);
+}
+
+.dress__note{
+    font-size:.8rem;
+    color:#888;
+}
