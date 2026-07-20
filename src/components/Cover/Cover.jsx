@@ -1,4 +1,5 @@
 import "../../styles/components/Cover/cover.scss";
+
 import bow from "../../assets/images/decorations/bow.png";
 import goldDetail from "../../assets/images/decorations/gold-detail.png";
 import foto from "../../assets/images/photos/foto-xv.jpg";
