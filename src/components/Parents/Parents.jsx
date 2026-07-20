@@ -19,8 +19,8 @@ export default function Parents() {
         </p>
 
         <h3 className="parents__names">
-          Juan Pérez<br />
-          María López
+          Germán De Jesús herrera Díaz.<br />
+          Anahi Cristal Coello Sánchez.
         </h3>
 
         <div className="parents__icon">✧</div>

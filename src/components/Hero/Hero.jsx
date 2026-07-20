@@ -7,13 +7,13 @@ export default function Hero() {
 
       <div className="hero__overlay"></div>
 
-      <img src={foto} alt="Carla Luna" className="hero__image" />
+      <img src={foto} alt="Anahi Cristal Coello Sánchez" className="hero__image" />
 
       <div className="hero__content">
 
         <h2 className="hero__subtitle">MIS XV</h2>
 
-        <h1 className="hero__title">Carla Luna</h1>
+        <h1 className="hero__title">Anahi Cristal Coello Sánchez</h1>
 
       </div>
 
