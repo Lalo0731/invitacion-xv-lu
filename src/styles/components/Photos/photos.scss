@@ -1,0 +1,213 @@
+@use "../../base/variables" as *;
+
+.photos{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.photos__hero{
+  position:relative;
+  height:260px;
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:15px;
+}
+
+.photos__hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.1);
+  transition:1.2s ease;
+}
+
+/* zoom lento tipo cine */
+.photos__hero:hover img{
+  transform:scale(1.2);
+}
+
+.photos__hero::before,
+.photos__hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:100%;
+  height:20px;
+  background:black;
+  z-index:2;
+}
+
+.photos__hero::before{ top:0; }
+.photos__hero::after{ bottom:0; }
+
+
+.photos__overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:20px;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.7),
+    rgba(0,0,0,.1)
+  );
+  color:white;
+}
+
+.photos__overlay h2{
+  font-family:$font-title;
+  font-size:1.4rem;
+  margin-bottom:5px;
+}
+
+.photos__overlay p{
+  font-size:.85rem;
+  opacity:.9;
+}
+
+/* GRID */
+.photos__grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 140px);
+  gap:10px;
+}
+
+.photos__strip{
+  display:flex;
+  gap:10px;
+  overflow:hidden;
+}
+
+.photos__strip img{
+  width:33%;
+  height:90px;
+  object-fit:cover;
+  border-radius:10px;
+  opacity:.7;
+  transition:.4s;
+}
+
+.photos__strip img:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
+
+.photos__more{
+  display:inline-block;
+  margin-top:25px;
+  font-size:.8rem;
+  letter-spacing:2px;
+  color:$color-primary;
+  text-decoration:none;
+  position:relative;
+  padding-left:28px; /* espacio para la cámara */
+}
+
+.photos__more::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:1px;
+  background:$color-primary;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.3s;
+}
+
+.photos__more:hover::after{
+  transform:scaleX(1);
+}
+
+.photos__camera-wrap{
+  position:absolute;
+  left:66.1px;
+  top: 12px;
+  width:35px;
+  height:30px;
+}
+
+/* hilo */
+.photos__camera-wrap::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:0.1px;
+  height:14px;
+  background:$color-primary;
+  transform:translateX(-50%);
+}
+
+/* cámara */
+.photos__camera{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  width:18px;
+  transform:translateX(-50%);
+  transform-origin: top center;
+
+  animation: swing 3s ease-in-out infinite;
+}
+
+/* animación columpio */
+@keyframes swing{
+  0%{ transform:translateX(-50%) rotate(-8deg); }
+  50%{ transform:translateX(-50%) rotate(8deg); }
+  100%{ transform:translateX(-50%) rotate(-8deg); }
+}
+
+/* hover más dinámico */
+.photos__more:hover .photos__camera{
+  animation: swingHover .8s ease-in-out infinite;
+}
+
+@keyframes swingHover{
+  0%{ transform:translateX(-50%) rotate(-15deg); }
+  50%{ transform:translateX(-50%) rotate(15deg); }
+  100%{ transform:translateX(-50%) rotate(-15deg); }
+}
+
+/* FLASH */
+.photos__flash{
+  position:absolute;
+  bottom:8px; /* justo donde está el lente */
+  left:50%;
+  width:6px;
+  height:6px;
+  background:white;
+  border-radius:50%;
+  transform:translateX(-50%) scale(0);
+  opacity:0;
+  pointer-events:none;
+}
+
+/* animación flash */
+@keyframes flash{
+  0%{
+    transform:translateX(-50%) scale(0);
+    opacity:0;
+  }
+
+  30%{
+    transform:translateX(-50%) scale(4);
+    opacity:1;
+    box-shadow:0 0 20px 10px rgba(255,255,255,.8);
+  }
+
+  100%{
+    transform:translateX(-50%) scale(0);
+    opacity:0;
+  }
+}
+
+/* ACTIVACIÓN */
+.photos__more:hover .photos__flash{
+  animation: flash .4s ease-out;
+}

@@ -5,8 +5,8 @@ import { Church, PartyPopper, MapPin } from "lucide-react";
 
 export default function Location() {
 
-  const ceremoniaMap = "https://maps.google.com/?q=Parroquia+San+Roque";
-  const recepcionMap = "https://maps.google.com/?q=Salon+Los+Pinos";
+  const ceremoniaMap = "https://maps.app.goo.gl/Z9T63Q8Y271VoGPT9?g_st=iw";
+  const recepcionMap = "https://maps.app.goo.gl/LWvTyH4NkbAv9i2z9?g_st=aw";
 
   return (
     <section className="location">
@@ -33,7 +33,7 @@ export default function Location() {
 
               <p className="location__place">
                 <MapPin className="location__pin" />
-                Parroquia San Roque
+                Parroquia Nuestra Señora de la Paz
               </p>
 
               <a href={ceremoniaMap} target="_blank" className="location__button">
@@ -62,7 +62,7 @@ export default function Location() {
 
               <p className="location__place">
                 <MapPin className="location__pin" />
-                Salón Los Pinos
+                Aloha Salón de Eventos
               </p>
 
               <p className="location__address">

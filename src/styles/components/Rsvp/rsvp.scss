@@ -1,0 +1,87 @@
+@use "../../base/variables" as *;
+
+.rsvp{
+  padding:60px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.rsvp__card{
+  background:white;
+  padding:30px 25px;
+  border-radius:20px;
+  text-align:center;
+  max-width:320px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.rsvp__title{
+  font-family:$font-title;
+  color:$color-primary;
+  margin-bottom:10px;
+}
+
+.rsvp__text{
+  font-size:.9rem;
+  color:#666;
+  margin-bottom:20px;
+}
+
+/* INPUTS */
+.rsvp__input,
+.rsvp__textarea{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  margin-bottom:15px;
+  font-size:.85rem;
+  outline:none;
+}
+
+.rsvp__input:focus,
+.rsvp__textarea:focus{
+  border-color:$color-primary;
+}
+
+/* SELECTOR */
+.rsvp__guests{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.rsvp__guests button{
+  width:30px;
+  height:30px;
+  border:none;
+  border-radius:50%;
+  background:$color-primary;
+  color:white;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+.rsvp__guests span{
+  font-weight:bold;
+  font-size:1.1rem;
+}
+
+/* BOTÓN */
+.rsvp__button{
+  display:inline-block;
+  background:$color-primary;
+  color:white;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:.85rem;
+  transition:.3s;
+}
+
+.rsvp__button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.15);
+}

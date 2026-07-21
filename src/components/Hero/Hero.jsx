@@ -13,7 +13,7 @@ export default function Hero() {
 
         <h2 className="hero__subtitle">MIS XV</h2>
 
-        <h1 className="hero__title">Anahi Cristal Coello Sánchez</h1>
+        <h1 className="hero__title">Thayli Sayuri Herrera Coello</h1>
 
       </div>
 

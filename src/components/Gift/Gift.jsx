@@ -22,8 +22,10 @@ export default function Gift() {
                <div className="gift__message">
                     <h3>Con cariño 💙</h3>
                     <p>
-                         Tu presencia es mi mejor regalo,<br />
-                         pero si deseas tener un detalle...
+                         Lo más valioso para mí es compartir este día contigo.<br/>
+                         Si deseas tener un detalle, puedes hacerlo con una lluvia de sobres.
+                         {/* Tu presencia es mi mejor regalo,<br />
+                         pero si deseas tener un detalle... */}
                     </p>
                </div>
 

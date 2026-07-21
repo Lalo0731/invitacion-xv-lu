@@ -41,7 +41,7 @@ export default function Cover ({ onOpen, playing, toggle }) {
           </div>
 
           <div className="cover__name">
-            <h1>Anahi Cristal Coello Sánchez</h1>
+            <h1>Thayli Sayuri Herrera Coello</h1>
           </div>
 
           <div className="cover__ornament">
