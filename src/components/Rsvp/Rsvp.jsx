@@ -42,7 +42,7 @@ ${note ? `Mensaje: ${note}` : ""}
           className="rsvp__input"
         />
 
-        {/* INVITADOS */}
+        
         <div className="rsvp__guests">
 
           <button onClick={() => setGuests(Math.max(1, guests - 1))}>−</button>
