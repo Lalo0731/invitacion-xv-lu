@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "../../styles/components/Gift/gift.scss";
 import butterfly from "../../assets/images/decorations/butterfly-1.png";
+import envelopeIcon from "../../assets/images/ui/envelopeIcon.png";
+import giftIcon from "../../assets/images/ui/giftIcon.png";
 
 export default function Gift() {
      const [open, setOpen] = useState(false);
@@ -20,13 +22,24 @@ export default function Gift() {
                     </div>
 
                <div className="gift__message">
-                    <h3>Con cariño 💙</h3>
+                    <h3>TU PRESENCIA ES MI MAYOT REGALO</h3>
                     <p>
-                         Lo más valioso para mí es compartir este día contigo.<br/>
-                         Si deseas tener un detalle, puedes hacerlo con una lluvia de sobres.
-                         {/* Tu presencia es mi mejor regalo,<br />
-                         pero si deseas tener un detalle... */}
+                         Sin embargo, si deseas obsequiarme algo <br/>
+                         especial lo agradecería de corazón.
                     </p>
+                      <div className="gift__options">
+
+    <div className="gift__option">
+      <img src={envelopeIcon} alt="sobre" />
+      <p>Lluvia de sobres</p>
+    </div>
+
+    <div className="gift__option">
+      <img src={giftIcon} alt="regalo" />
+      <p>Regalo</p>
+    </div>
+
+  </div>
                </div>
 
                <div className="gift__inside">

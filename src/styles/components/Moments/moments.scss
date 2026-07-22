@@ -1,0 +1,283 @@
+@use "../../base/variables" as *;
+
+.moments{
+
+    padding:70px 20px;
+    text-align:center;
+
+}
+
+.moments__title{
+
+    font-family:$font-title;
+    color:$color-primary;
+    margin-bottom:12px;
+
+}
+
+.moments__subtitle{
+
+    max-width:320px;
+    margin:auto;
+    color:#666;
+    font-size:.92rem;
+    line-height:1.7;
+    margin-bottom:35px;
+
+}
+
+.moments__card{
+
+    position:relative;
+
+    max-width:340px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.moments__header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.moments__avatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #e6d3a3;
+
+}
+
+.moments__header h3{
+
+    color:$color-primary;
+
+    font-size:1rem;
+
+    margin-bottom:2px;
+
+}
+
+.moments__header span{
+
+    color:#888;
+
+    font-size:.8rem;
+
+}
+
+.moments__qr{
+
+    width:210px;
+
+    height:210px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:12px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.moments__qr img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    animation:qrPulse 3s infinite;
+
+    background: #7ea8cf;
+
+}
+
+@keyframes qrPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+/* brillo */
+
+.moments__shine{
+
+    position:absolute;
+
+    top:-30%;
+
+    left:-80%;
+
+    width:40%;
+
+    height:170%;
+
+    background:rgba(255,255,255,.45);
+
+    transform:rotate(25deg);
+
+    animation:shine 5s infinite;
+
+}
+
+@keyframes shine{
+
+    0%{
+
+        left:-80%;
+
+    }
+
+    100%{
+
+        left:160%;
+
+    }
+
+}
+
+.moments__scan{
+
+    margin-top:18px;
+
+    color:$color-primary;
+
+    font-weight:600;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+}
+
+.moments__button{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:$color-primary;
+
+    transition:.35s;
+
+}
+
+.moments__button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+/* Mariposas */
+
+.moments__butterfly{
+
+    position:absolute;
+
+    width:55px;
+
+    opacity:.12;
+
+    animation:float 6s ease-in-out infinite;
+
+}
+
+.left{
+
+    top:15px;
+
+    left:-18px;
+
+}
+
+.right{
+
+    bottom:20px;
+
+    right:-18px;
+
+    transform:rotate(180deg);
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
