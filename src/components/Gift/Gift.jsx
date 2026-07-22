@@ -22,25 +22,25 @@ export default function Gift() {
                     </div>
 
                <div className="gift__message">
-                    <h3>TU PRESENCIA ES MI MAYOT REGALO</h3>
+                    <h3>TU PRESENCIA ES MI MAYOR REGALO</h3>
                     <p>
                          Sin embargo, si deseas obsequiarme algo <br/>
                          especial lo agradecería de corazón.
                     </p>
-                      <div className="gift__options">
+                    <div className="gift__options">
 
-    <div className="gift__option">
-      <img src={envelopeIcon} alt="sobre" />
-      <p>Lluvia de sobres</p>
-    </div>
+                         <div className="gift__option">
+                              <img src={envelopeIcon} alt="sobre" />
+                              <p>Lluvia de sobres</p>
+                         </div>
 
-    <div className="gift__option">
-      <img src={giftIcon} alt="regalo" />
-      <p>Regalo</p>
-    </div>
+                         <div className="gift__option">
+                              <img src={giftIcon} alt="regalo" />
+                              <p>Regalo</p>
+                         </div>
 
-  </div>
-               </div>
+                         </div>
+                    </div>
 
                <div className="gift__inside">
                     <img src={butterfly} className="b b1" />
