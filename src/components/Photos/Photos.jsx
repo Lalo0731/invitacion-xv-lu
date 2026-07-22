@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import "../../styles/components/Photos/photos.scss";
 
 import img1 from "../../assets/images/photos/p1.jpg";
+import imgd from "../../assets/images/photos/"
 import img2 from "../../assets/images/photos/p2.jpg";
 import img3 from "../../assets/images/photos/p3.jpg";
 import camera from "../../assets/images/icons/camera.png"
