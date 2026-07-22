@@ -6,6 +6,7 @@ import img2 from "../../assets/images/photos/p2.jpg";
 import img3 from "../../assets/images/photos/p3.jpg";
 import camera from "../../assets/images/icons/camera.png"
 
+
 import GalleryModal from "./GalleryModal";
 
 export default function Photos() {
