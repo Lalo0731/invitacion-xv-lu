@@ -1,24 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../styles/components/Rsvp/rsvp.scss";
 
-export default function RSVP() {
+export default function RSVP({ guests = 1 }) {
 
   const [name, setName] = useState("");
-  const [guests, setGuests] = useState(1);
   const [note, setNote] = useState("");
+  const [error, setError] = useState("");
 
   const phone = "529611840957";
 
-  const buildMessage = () => {
-    return encodeURIComponent(
-      `Hola 💙 soy ${name || "invitado"}.
-Confirmo mi asistencia a los XV junto con ${guests} persona${guests > 1 ? "s" : ""}.
-${note ? `Mensaje: ${note}` : ""}
-¡Será un placer acompañarte! 🎉`
-    );
-  };
+  const sendWhatsApp = (type) => {
+  if (!name) return;
 
-  const whatsappLink = `https://wa.me/${phone}?text=${buildMessage()}`;
+  const message = type === "yes" ? buildYesMessage() : buildNoMessage();
+
+  const url = `https://wa.me/${phone}?text=${message}`;
+
+  window.open(url, "_self"); // 🔥 clave
+};
+
+const buildYesMessage = () =>
+  encodeURIComponent(
+    `Es un honor confirmar nuestra asistencia a esta celebración tan especial
+    Será un placer acompañarte en este día tan significativo
+    • Nombre: ${name}
+    • Invitados: ${guests}
+    
+    ${note ? `• Nota: ${note}\n` : ""}`);
+
+  /* ❌ MENSAJE SI NO ASISTE */
+const buildNoMessage = () =>
+  encodeURIComponent(
+    `Agradecemos sinceramente la invitación a este evento tan especial
+    Lamentablemente no podremos acompañarte, pero deseamos que sea una celebración maravillosa
+    • Nombre: ${name}
+    • Pases: ${guests}`);
+
+  const yesLink = `https://wa.me/${phone}?text=${buildYesMessage()}`;
+  console.log(yesLink);
+  const noLink = `https://wa.me/${phone}?text=${buildNoMessage()}`;
 
   return (
     <section className="rsvp">
@@ -30,26 +50,35 @@ ${note ? `Mensaje: ${note}` : ""}
         </h2>
 
         <p className="rsvp__text">
-          Nos encantará compartir contigo este momento 💙
+          Tu presencia es muy importante para nosotros 💙
         </p>
 
         {/* NOMBRE */}
         <input
           type="text"
-          placeholder="Tu nombre"
+          placeholder="Escribe tu nombre completo"
           value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="rsvp__input"
+          onChange={(e) => {
+            setName(e.target.value);
+            setError(""); // 🔥 limpia error
+          }}          className="rsvp__input"
         />
+        {error && <p className="rsvp__error">{error}</p>}
 
-        
-        <div className="rsvp__guests">
+        {/* 🎟 PASES (YA FIJOS) */}
+        <div className="rsvp__pases">
 
-          <button onClick={() => setGuests(Math.max(1, guests - 1))}>−</button>
+          <p>Pases asignados</p>
 
-          <span>{guests}</span>
+          <div className="rsvp__icons">
+            {Array.from({ length: guests }).map((_, i) => (
+              <span key={i}>👤</span>
+            ))}
+          </div>
 
-          <button onClick={() => setGuests(guests + 1)}>+</button>
+          <strong>
+            {guests} persona{guests > 1 ? "s" : ""}
+          </strong>
 
         </div>
 
@@ -61,14 +90,38 @@ ${note ? `Mensaje: ${note}` : ""}
           className="rsvp__textarea"
         />
 
-        {/* BOTÓN */}
+        {/* BOTONES */}
+        <div className="rsvp__actions">
+
         <a
-          href={whatsappLink}
+          href={yesLink}
           target="_blank"
-          className="rsvp__button"
+          className="rsvp__button rsvp__button--yes"
+          onClick={(e) => {
+            if (!name.trim()) {
+              e.preventDefault();
+              setError("Por favor escribe tu nombre completo");
+            }
+          }}
         >
-          Confirmar por WhatsApp
+          Sí asistiré
         </a>
+
+        <a
+          href={noLink}
+          target="_blank"
+          className="rsvp__button rsvp__button--no"
+          onClick={(e) => {
+            if (!name.trim()) {
+              e.preventDefault();
+              setError("Por favor escribe tu nombre completo");
+            }
+          }}
+        >
+          No asistiré
+        </a>
+
+        </div>
 
       </div>
 

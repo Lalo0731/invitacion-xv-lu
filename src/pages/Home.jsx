@@ -9,7 +9,7 @@ import Photos from '../components/Photos/Photos';
 import RSVP from '../components/Rsvp/Rsvp';
 import Moments from '../components/Moments/Moments';
 
-export default function Home() {
+export default function Home({guests}) {
   return (
     <>
       <Hero/>
@@ -19,7 +19,7 @@ export default function Home() {
       <DressCode/>
       <Gift/>
       <Photos/>
-      <RSVP/>
+      <RSVP guests={guests}/>
       <Moments/>
     </>
   )

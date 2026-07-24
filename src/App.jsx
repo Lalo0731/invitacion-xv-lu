@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import Cover from "./components/Cover/Cover";
@@ -10,7 +10,19 @@ import IntroAnimation from "./components/IntroAnimation/IntroAnimation";
 
 function App() {
   const [open, setOpen] = useState(false);
+  const [guests, setGuests] = useState(1);
   const { playing, toggle } = useAudio();
+
+    useEffect(() => {
+    const path = window.location.pathname; // /4
+
+    const number = parseInt(path.replace("/", ""));
+
+    if (number && number >= 1 && number <= 10) {
+      setGuests(number);
+      setOpen(true); // 🔥 abre directo
+    }
+  }, []);
 
   const handleOpen = () => {
     setOpen(true);
@@ -30,7 +42,7 @@ function App() {
       
       {open && (
         <IntroAnimation key="home">
-          <Home />
+          <Home guests={guests} />
         </IntroAnimation>
       )}
     </AnimatePresence>
