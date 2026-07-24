@@ -32,7 +32,7 @@ function App() {
 
   if (code && invites[code]) {
     setGuests(invites[code].passes);
-    setOpen(true);
+    // setOpen(true);
   }
 }, []);
 
