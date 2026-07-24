@@ -21,7 +21,7 @@ export default function RSVP({ guests = 1 }) {
 
 const buildYesMessage = () =>
   encodeURIComponent(
-    `Es un honor confirmar nuestra asistencia a esta celebración tan especial.\nSerá un placer acompañarte en este día tan significativo.
+    `Es un honor confirmar nuestra asistencia a esta celebración tan especial.\n\nSerá un placer acompañarte en este día tan significativo.
     • Nombre: ${name}
     • Invitados: ${guests}
     
@@ -30,7 +30,7 @@ const buildYesMessage = () =>
   /* ❌ MENSAJE SI NO ASISTE */
 const buildNoMessage = () =>
   encodeURIComponent(
-    `Agradecemos sinceramente la invitación a este evento tan especial.\nLamentablemente no podremos acompañarte, pero deseamos que sea una celebración maravillosa.
+    `Agradecemos sinceramente la invitación a este evento tan especial.\n\nLamentablemente no podremos acompañarte, pero deseamos que sea una celebración maravillosa.
     • Nombre: ${name}
     • Pases: ${guests}`);
 
