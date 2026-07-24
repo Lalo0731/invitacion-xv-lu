@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 
 import useAudio from "./hooks/useAudio";
 import IntroAnimation from "./components/IntroAnimation/IntroAnimation";
+
+import invites from "./data/passes.json";
 // import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 function App() {
@@ -13,16 +15,26 @@ function App() {
   const [guests, setGuests] = useState(1);
   const { playing, toggle } = useAudio();
 
-    useEffect(() => {
-    const path = window.location.pathname; // /4
+  //   useEffect(() => {
+  //   const path = window.location.pathname; // /4
 
-    const number = parseInt(path.replace("/", ""));
+  //   const number = parseInt(path.replace("/", ""));
 
-    if (number && number >= 1 && number <= 10) {
-      setGuests(number);
-      setOpen(true); // 🔥 abre directo
-    }
-  }, []);
+  //   if (number && number >= 1 && number <= 10) {
+  //     setGuests(number);
+  //     setOpen(true); // 🔥 abre directo
+  //   }
+  // }, []);
+
+  useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("inv");
+
+  if (code && invites[code]) {
+    setGuests(invites[code].passes);
+    setOpen(true);
+  }
+}, []);
 
   const handleOpen = () => {
     setOpen(true);
