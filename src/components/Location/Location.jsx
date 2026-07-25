@@ -66,7 +66,8 @@ export default function Location() {
               </p>
 
               <p className="location__address">
-                Av. Principal #123, Ciudad
+                Caminera cuchilla santa rosa <span className="location__cp">cp 29058</span><br/>
+                A <span className="location__mt">300 mts</span> adelant del salón Renhi
               </p>
 
               <a href={recepcionMap} target="_blank" className="location__button">
