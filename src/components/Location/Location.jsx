@@ -20,7 +20,7 @@ export default function Location() {
           <div className="location__event">
 
             <div className="location__time">
-              4:00 PM
+              6:00 PM
             </div>
 
             <div className="location__content">
@@ -47,7 +47,7 @@ export default function Location() {
           <div className="location__event">
 
             <div className="location__time">
-              6:00 PM
+              8:00 PM
             </div>
 
             <div className="location__content">
