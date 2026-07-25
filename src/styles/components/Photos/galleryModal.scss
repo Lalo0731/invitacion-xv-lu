@@ -47,8 +47,11 @@
   top:50%;
   transform:translateY(-50%);
   background:rgba(255,255,255,.1);
+  background:rgba(0,0,0,.6);
   border:none;
   color:white;
+  background: rgba(0,0,0,.5);
+backdrop-filter: blur(6px);
   font-size:2rem;
   width:40px;
   height:40px;
@@ -61,8 +64,8 @@
   background:rgba(255,255,255,.25);
 }
 
-.gallery__nav.left{ left:-50px; }
-.gallery__nav.right{ right:-50px; }
+.gallery__nav.left{ left: 10px; }
+.gallery__nav.right{ right: 10px; }
 
 /* cerrar */
 .gallery__close{

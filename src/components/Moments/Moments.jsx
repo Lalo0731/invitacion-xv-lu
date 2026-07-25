@@ -24,13 +24,13 @@ export default function Moments() {
         {/* Mariposas */}
         <img
           src={butterfly}
-          className="moments__butterfly left"
+          className="moments__butterfly moments__butterfly--left"
           alt=""
         />
 
         <img
           src={butterfly}
-          className="moments__butterfly right"
+          className="moments__butterfly moments__butterfly--right"
           alt=""
         />
 

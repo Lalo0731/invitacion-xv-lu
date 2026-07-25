@@ -61,6 +61,8 @@ useEffect(() => {
         onTouchStart={(e) => handleStart(e.touches[0].clientX)}
         onTouchEnd={(e) => handleEnd(e.changedTouches[0].clientX)}
 
+        onClick={(e) => e.stopPropagation()}
+
         /* MOUSE (desktop) */
         onMouseDown={(e) => handleStart(e.clientX)}
         onMouseUp={(e) => handleEnd(e.clientX)}
@@ -77,8 +79,8 @@ useEffect(() => {
         />
 
         {/* controles */}
-        <button className="gallery__nav left" onClick={prev}>‹</button>
-        <button className="gallery__nav right" onClick={next}>›</button>
+        <button className="gallery__nav left" onClick={(e) => {e.stopPropagation(); prev();}}>‹</button>
+        <button className="gallery__nav right" onClick={(e) => {e.stopPropagation(); next();}}>›</button>
 
         {/* contador */}
         <div className="gallery__counter">
