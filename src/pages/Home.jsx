@@ -8,6 +8,7 @@ import Gift from '../components/Gift/Gift';
 import Photos from '../components/Photos/Photos';
 import RSVP from '../components/Rsvp/Rsvp';
 import Moments from '../components/Moments/Moments';
+import Evolution from '../components/Evolution/Evolution';
 
 export default function Home({guests}) {
   return (
@@ -15,6 +16,7 @@ export default function Home({guests}) {
       <Hero/>
       <Countdown/>
       <Parents/>
+      <Evolution/>
       <Location/>
       <DressCode/>
       <Gift/>
