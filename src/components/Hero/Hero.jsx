@@ -1,5 +1,5 @@
 import "../../styles/components/Hero/hero.scss";
-import foto from "../../assets/images/photos/foto-xv.jpg";
+import foto from "../../assets/images/photos/foto-presentacion.jpg";
 
 export default function Hero() {
   return (

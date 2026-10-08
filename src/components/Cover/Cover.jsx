@@ -2,7 +2,7 @@ import "../../styles/components/Cover/cover.scss";
 
 import bow from "../../assets/images/decorations/bow.png";
 import goldDetail from "../../assets/images/decorations/gold-detail.png";
-import foto from "../../assets/images/photos/foto-xv.jpg";
+import foto from "../../assets/images/photos/foto-principal.jpg";
 import flowerTL from "../../assets/images/decorations/flowers-top-left.png";
 import flowerTR from "../../assets/images/decorations/flowers-top-right.png";
 import flowerBL from "../../assets/images/decorations/flowers-bottom-left.png";
@@ -53,7 +53,7 @@ export default function Cover ({ onOpen, playing, toggle }) {
           </div>
 
           <div className="cover__photo">
-            <img src={foto} alt="Carla Luna" />
+            <img src={foto} alt="Thayli Sayuri Herrera Coello" />
           </div>
           <button
             className="cover__open-btn"

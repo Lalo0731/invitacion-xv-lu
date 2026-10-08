@@ -1,17 +1,22 @@
 import { React, useEffect, useState } from "react";
 import "../../styles/components/Photos/photos.scss";
 
-import img1 from "../../assets/images/photos/P1.jpg";
-import img2 from "../../assets/images/photos/P2.jpg";
-import img3 from "../../assets/images/photos/P3.jpg";
-import camera from "../../assets/images/icons/camera.png"
+import img1 from "../../assets/images/photos/sesion1.jpg";
+import img2 from "../../assets/images/photos/sesion2.jpg";
+import img3 from "../../assets/images/photos/sesion3.jpg";
+import img4 from "../../assets/images/photos/sesion4.jpg";
+import img5 from "../../assets/images/photos/sesion5.jpg";
+import img6 from "../../assets/images/photos/sesion6.jpg";
+import img7 from "../../assets/images/photos/sesion7.jpg";
+
+import camera from "../../assets/images/icons/camera.png";
 
 
 import GalleryModal from "./GalleryModal";
 
 export default function Photos() {
 
-     const images = [img1, img2, img3];
+     const images = [img1, img2, img3, img4, img5, img6, img7];
 
      const [open, setOpen] = useState(false);
      const [current, setCurrent] = useState(0);

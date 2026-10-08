@@ -1,7 +1,7 @@
 import "../../styles/components/Moments/moments.scss";
 
 import qr from "../../assets/images/qr/instagram-qr.png";
-import profile from "../../assets/images/photos/foto-xv.jpg";
+import profile from "../../assets/images/photos/img1.jpg";
 import butterfly from "../../assets/images/decorations/butterfly-1.png";
 
 export default function Moments() {
