@@ -1,0 +1,24 @@
+1. 👑 HERO (foto principal)
+2. ⏳ Countdown + Fecha
+3. 👨‍👩‍👧 Mensaje con padres
+4. 📍 Ubicación
+5. 👗 Dress Code
+6. 🎁 Mesa de regalos
+7. 📸 Sesión de fotos (preview)
+8. 💬 RSVP WhatsApp
+9. 📷 QR Moments
+10. 🖼️ Galería completa
+
+
+NV versión
+👑 HERO
+⏳ Countdown
+👨‍👩‍👧 Mensaje con padres
+🎬 Mi Historia (VIDEO) ← AQUÍ 🔥
+📍 Ubicación
+👗 Dress Code
+🎁 Mesa de regalos
+📸 Fotos
+💬 RSVP
+📷 QR
+🖼️ Galería

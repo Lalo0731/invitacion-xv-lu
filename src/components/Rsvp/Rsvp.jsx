@@ -7,7 +7,7 @@ export default function RSVP({ guests = 1 }) {
   const [note, setNote] = useState("");
   const [error, setError] = useState("");
 
-  const phone = "529611840957";
+  const phone = "529613702856";
 
   const sendWhatsApp = (type) => {
   if (!name) return;

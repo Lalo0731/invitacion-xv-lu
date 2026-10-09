@@ -3,7 +3,7 @@ import "../../styles/components/Countdown/countdown.scss";
 
 export default function Countdown() {
 
-  const targetDate = new Date("2026-11-11T19:00:00").getTime();
+  const targetDate = new Date("2026-11-07T19:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState(getTime());
 
