@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Howl } from "howler";
 
-import song from "../assets/music/bunny.mp3";
+import song from "../assets/music/song.mp3";
 
 export default function useAudio() {
 
